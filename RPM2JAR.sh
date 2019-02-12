@@ -36,9 +36,9 @@ if [ ! -d $sources ]; then
     echo "Could not find RPMs directory!"
     exit 11
 else
-    cd $sources
     sudo chown -R stingley $sources
     sudo chmod -R 775 $sources
+    cd $sources
     count=$(ls -1 *.rpm 2>/dev/null | wc -l)
     if [[ $count -gt 0 ]]; then
         echo "RPMs appear to exist."
