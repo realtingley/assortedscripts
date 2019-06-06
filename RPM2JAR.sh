@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -x
+
 # Make sure this wasn't run as root or with sudo.
 if
   [[ $EUID -eq 0 ]]; then
